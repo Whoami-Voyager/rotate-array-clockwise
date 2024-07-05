@@ -1,5 +1,10 @@
 function rotateArray(arr, k) {
-  // type your code here
+  const newArr = arr
+  for (let i = 0; k > i; ++i) {
+    newArr.unshift(arr[arr.length - 1])
+    newArr.pop()
+  }
+  return newArr
 }
 
 if (require.main === module) {
@@ -22,3 +27,7 @@ module.exports = rotateArray;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+// the function takes in the array and k
+// the function loops as much as k, and for each one it takes the length of the array
+// using that length, takes an index and unshifts and deletes from the array and returns that array
